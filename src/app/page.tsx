@@ -1,6 +1,5 @@
 'use client';
 
-import { getProducts } from '@/lib/db';
 import { ProductCard } from '@/components/ProductCard';
 import { PromoBanner } from '@/components/PromoBanner';
 import { ProductFilters } from '@/components/ProductFilters';
