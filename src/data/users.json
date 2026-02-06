@@ -1,0 +1,11 @@
+[
+  {
+    "id": "admin-seed",
+    "username": "admin",
+    "password": "password",
+    "role": "ADMIN",
+    "fullName": "System Administrator",
+    "idCard": "1234567890123",
+    "walletBalance": 1000000
+  }
+]

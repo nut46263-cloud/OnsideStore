@@ -1,0 +1,4 @@
+
+// ... (appending new functions to db.ts in next step, but need to write the file content for db.ts extensions first? No, I can use replace_file_content to append)
+// Actually, I'll use `multi_replace_file_content` to add the new functions to `src/lib/db.ts` in the NEXT turn after verifying this one. 
+// For now, I'll just update the task status in task.md

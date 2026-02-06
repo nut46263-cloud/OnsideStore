@@ -1,0 +1,33 @@
+[
+  {
+    "id": "k99mi88y5z",
+    "name": "Garena Shell 1500",
+    "description": "45",
+    "price": 990,
+    "imageUrl": "https://th.bing.com/th/id/OIP.WiWX1tRr1UM6-Atq3HV5kAHaHa?w=234&h=181&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3",
+    "requiresShipping": true,
+    "category": "GAME_TOPUP",
+    "tags": [
+      "Garena",
+      "game",
+      "Topup",
+      "Rov",
+      "FreeFrie"
+    ],
+    "createdAt": "2026-02-06T03:11:57.936Z"
+  },
+  {
+    "id": "n1to166mr5p",
+    "name": "ซองใส่การ์ด 50 ชิ้น",
+    "description": "100",
+    "price": 45,
+    "imageUrl": "https://th.bing.com/th/id/OIP.q5cP8EkJJ8QffwBpU8EEHgHaHa?w=203&h=203&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3",
+    "requiresShipping": true,
+    "category": "PHYSICAL",
+    "tags": [
+      "การ์ด",
+      "ซองใส"
+    ],
+    "createdAt": "2026-02-06T03:15:03.176Z"
+  }
+]
