@@ -38,6 +38,17 @@ export async function getAllTopUps() {
     })).sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
 }
 
+// User: Get own top-up requests
+export async function getUserTopUpsAction() {
+    const sessionUser = await getSession();
+    if (!sessionUser) return [];
+
+    const requests = await getTopUpRequests();
+    return requests
+        .filter(req => req.userId === sessionUser.id)
+        .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+}
+
 // Admin: Approve Request
 export async function approveTopUpAction(requestId: string) {
     const sessionUser = await getSession();
