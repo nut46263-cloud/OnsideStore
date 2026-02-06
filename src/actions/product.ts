@@ -15,7 +15,7 @@ export async function addProductAction(formData: FormData) {
     const tags = tagsRaw.split(',').map(t => t.trim()).filter(Boolean);
 
     if (!name || isNaN(price)) {
-        return { error: 'Invalid data' };
+        return;
     }
 
     const newProduct: Product = {
@@ -33,7 +33,6 @@ export async function addProductAction(formData: FormData) {
     await saveProduct(newProduct);
     revalidatePath('/admin/products');
     revalidatePath('/');
-    return { success: true };
 }
 
 export async function deleteProductAction(id: string) {
