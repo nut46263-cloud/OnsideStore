@@ -52,11 +52,11 @@ export async function getUserTopUpsAction() {
 // Admin: Approve Request
 export async function approveTopUpAction(requestId: string) {
     const sessionUser = await getSession();
-    if (!sessionUser || sessionUser.role !== 'ADMIN') return { error: 'Unauthorized' };
+    if (!sessionUser || sessionUser.role !== 'ADMIN') return;
 
     const request = await findTopUpRequestById(requestId);
-    if (!request) return { error: 'Request not found' };
-    if (request.status !== 'PENDING') return { error: 'Request already processed' };
+    if (!request) return;
+    if (request.status !== 'PENDING') return;
 
     // Update Request Status
     request.status = 'APPROVED';
@@ -72,22 +72,20 @@ export async function approveTopUpAction(requestId: string) {
     }
 
     revalidatePath('/admin/topups');
-    return { success: true };
 }
 
 // Admin: Reject Request
 export async function rejectTopUpAction(requestId: string) {
     const sessionUser = await getSession();
-    if (!sessionUser || sessionUser.role !== 'ADMIN') return { error: 'Unauthorized' };
+    if (!sessionUser || sessionUser.role !== 'ADMIN') return;
 
     const request = await findTopUpRequestById(requestId);
-    if (!request) return { error: 'Request not found' };
-    if (request.status !== 'PENDING') return { error: 'Request already processed' };
+    if (!request) return;
+    if (request.status !== 'PENDING') return;
 
     request.status = 'REJECTED';
     request.processedAt = new Date().toISOString();
     await saveTopUpRequest(request);
 
     revalidatePath('/admin/topups');
-    return { success: true };
 }
